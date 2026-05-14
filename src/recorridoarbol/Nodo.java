@@ -28,14 +28,20 @@ public class Nodo<T> { //la T es para decir el tipo, manejar nodos de cualquier 
         this.hijo = hijo;
     }
     public void setHijo(int pos, T dato){ //nuevo hijo en una posicion especifica
+        Nodo[] nuevoHijo = new Nodo[pos + 1]; //nuevo arreglo, donde el tamaño depende de la posicion
         
+        nuevoHijo[pos] = new Nodo(dato, null);//en la posicion indicada se crea, un nuevo nodo con el dato recibido
+        
+        this.hijo = nuevoHijo; //el nuevo arreglo se asigna como hijos del nodo actual
     }
     public void preOrden(){
-        System.out.print(this.dato);
-        if(hijo == null)return;
-        for (Nodo n : hijo){
-            if (n != null)
-            System.out.print(",");
+        System.out.print(this.dato + ","); //imprimir dato del nodo actual
+        if(hijo == null)return;//si no tiene hijos termina el metodo
+        
+        for (Nodo n : hijo){ //recorre cada hijo del arreglo
+            
+            if (n != null)//verifica que el nodo no sea null
+            
             n.preOrden();
     }
     }
