@@ -54,6 +54,14 @@ public class Nodo<T> { //la T es para decir el tipo, manejar nodos de cualquier 
         }
     }
     public void postOrden (){ //metodo postOrden
-        
+        if(hijo !=null){ //ver si el nodo tiene hijos
+            for(Nodo n: hijo){
+                
+                if(n !=null){
+                    n.postOrden();
+                }
+            }
+        }
+        System.out.print(this.dato + ",");
     }
 }
