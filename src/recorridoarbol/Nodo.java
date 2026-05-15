@@ -53,4 +53,7 @@ public class Nodo<T> { //la T es para decir el tipo, manejar nodos de cualquier 
             hijo[1].inOrden(); //recorrer el hijo derecho
         }
     }
+    public void postOrden (){ //metodo postOrden
+        
+    }
 }
