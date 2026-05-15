@@ -15,15 +15,12 @@ public class Nodo<T> { //la T es para decir el tipo, manejar nodos de cualquier 
     public T getDato() {
         return dato;
     }
-
     public Nodo[] getHijo() {
         return hijo;
     }
-
     public void setDato(T dato) {
         this.dato = dato;
     }
-
     public void setHijo(Nodo[] hijo) {
         this.hijo = hijo;
     }
@@ -34,9 +31,10 @@ public class Nodo<T> { //la T es para decir el tipo, manejar nodos de cualquier 
         
         this.hijo = nuevoHijo; //el nuevo arreglo se asigna como hijos del nodo actual
     }
-    public void preOrden(){
+    public void preOrden(){ //recorrido PREORDEN
         System.out.print(this.dato + ","); //imprimir dato del nodo actual
-        if(hijo == null)return;//si no tiene hijos termina el metodo
+        
+        if(hijo == null)return;//si no tiene hijos termina
         
         for (Nodo n : hijo){ //recorre cada hijo del arreglo
             
@@ -44,5 +42,8 @@ public class Nodo<T> { //la T es para decir el tipo, manejar nodos de cualquier 
             
             n.preOrden();
     }
+    }
+    public void inOrden (){
+        
     }
 }
