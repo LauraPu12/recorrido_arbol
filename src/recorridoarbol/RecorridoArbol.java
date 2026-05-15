@@ -11,8 +11,14 @@ public class RecorridoArbol {
         Nodo[]arrNodo={new Nodo(23,null),new Nodo(11,null)};
         tree.setHijo(arrNodo);
         tree.getHijo()[0].setHijo (0, 50); //arreglo de tamaño 1
-        tree.getHijo()[1].setHijo (1, 40); //arreglo d tamaña 2
+        tree.getHijo()[1].setHijo (1, 40); //arreglo de tamaño 2
+        
+        System.out.println("Recorrido PreOrden:");
         tree.preOrden();
+        System.out.println("");//salto de linea
+        
+        
+        
     }
     
 }
