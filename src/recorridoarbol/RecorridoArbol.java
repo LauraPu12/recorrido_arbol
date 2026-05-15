@@ -14,11 +14,15 @@ public class RecorridoArbol {
         tree.getHijo()[1].setHijo (1, 40); //arreglo de tamaño 2
         
         System.out.println("Recorrido PreOrden:");
-        tree.preOrden();
+        tree.preOrden();//llamar al metodo
         System.out.println("");//salto de linea
         
+        System.out.println("Recorrido InOrden:");
+        tree.inOrden();//llamar al metodo
+        System.out.println("");
         
-        
+        System.out.println("Recorrido PostOrden");
+        tree.postOrden(); //llamar al metodo 
     }
     
 }
