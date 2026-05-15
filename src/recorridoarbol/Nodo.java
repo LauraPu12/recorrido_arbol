@@ -47,6 +47,10 @@ public class Nodo<T> { //la T es para decir el tipo, manejar nodos de cualquier 
         if (hijo != null && hijo.length >0 && hijo [0]!=null){ //verifica si existe el hijo izquierdo
             hijo [0].inOrden(); //recorrer el hijo izq primero
         }
-
+        System.out.print(this.dato + ",");
+        
+        if(hijo != null && hijo.length >1 &&hijo[1]!=null){
+            hijo[1].inOrden(); //recorrer el hijo derecho
+        }
     }
 }
