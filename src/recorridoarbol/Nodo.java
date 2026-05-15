@@ -43,7 +43,10 @@ public class Nodo<T> { //la T es para decir el tipo, manejar nodos de cualquier 
             n.preOrden();
     }
     }
-    public void inOrden (){
-        
+    public void inOrden (){ //recorrido InOrden
+        if (hijo != null && hijo.length >0 && hijo [0]!=null){ //verifica si existe el hijo izquierdo
+            hijo [0].inOrden(); //recorrer el hijo izq primero
+        }
+
     }
 }
